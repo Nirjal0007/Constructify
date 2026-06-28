@@ -1,0 +1,174 @@
+:root {
+    --bs-primary: #f4671e;
+    --bs-primary-rgb: 244, 103, 30;
+    --navy: #0f1b2d;
+    --navy-light: #1c3554;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #2c3440;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+.btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: #d9550f;
+    border-color: #d9550f;
+}
+
+.btn-outline-primary {
+    color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.text-primary {
+    color: var(--bs-primary) !important;
+}
+
+.bg-primary {
+    background-color: var(--bs-primary) !important;
+}
+
+.bg-primary-subtle {
+    background-color: rgba(244, 103, 30, 0.12) !important;
+}
+
+.bg-navy {
+    background-color: var(--navy) !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Navbar */
+.navbar .nav-link {
+    font-weight: 500;
+    color: #2c3440;
+    padding: 0.5rem 1rem;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+    color: var(--bs-primary);
+}
+
+/* Stats counter strip */
+.stats-strip {
+    background-color: var(--bs-primary);
+}
+
+.stats-strip .stat-number {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #fff;
+}
+
+.stats-strip .stat-label {
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+}
+
+/* Cards */
+.service-card, .project-card, .team-card, .testimonial-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-card:hover, .team-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.08) !important;
+}
+
+.project-card {
+    border-radius: 0.5rem;
+}
+
+.project-overlay {
+    background: rgba(15, 27, 45, 0.0);
+    opacity: 0;
+    transition: opacity 0.3s ease, background 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+    background: rgba(15, 27, 45, 0.45);
+}
+
+.object-fit-cover {
+    object-fit: cover;
+}
+
+/* Process steps (How We Work) */
+.process-step .step-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: rgba(244, 103, 30, 0.2);
+}
+
+.process-step .step-icon {
+    width: 70px;
+    height: 70px;
+}
+
+/* Accordion (FAQ) */
+.accordion-button:not(.collapsed) {
+    color: var(--bs-primary);
+    background-color: rgba(244, 103, 30, 0.08);
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(244, 103, 30, 0.3);
+}
+
+/* Section spacing helper */
+.section-py {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.section-title-eyebrow {
+    color: var(--bs-primary);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+/* Admin sidebar (used in admin layout) */
+.admin-sidebar {
+    width: 260px;
+    min-height: 100vh;
+    background-color: var(--navy);
+}
+
+.admin-sidebar .nav-link {
+    color: rgba(255, 255, 255, 0.7);
+    padding: 0.65rem 1.25rem;
+    border-radius: 0.4rem;
+    margin: 0.15rem 0.75rem;
+}
+
+.admin-sidebar .nav-link.active,
+.admin-sidebar .nav-link:hover {
+    background-color: rgba(244, 103, 30, 0.15);
+    color: #fff;
+}
+
+.admin-sidebar .nav-link i {
+    width: 22px;
+}
