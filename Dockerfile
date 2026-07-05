@@ -25,11 +25,15 @@ COPY . .
 # Install dependencies
 RUN composer install --no-dev --optimize-autoloader --no-scripts --no-interaction
 
-# Set permissions
-RUN chmod -R 775 storage bootstrap/cache
+# Make sure public/css directory exists and has correct permissions
+RUN mkdir -p public/css
+RUN chmod -R 775 storage bootstrap/cache public/css
 
 # Expose port
-EXPOSE $PORT
+EXPOSE 8080
 
 # Start command
-CMD php artisan config:cache && php artisan route:cache && php artisan migrate --force && php artisan storage:link && php artisan serve --host=0.0.0.0 --port=$PORT
+CMD php artisan config:cache && \
+    php artisan route:cache && \
+    php artisan storage:link && \
+    php artisan serve --host=0.0.0.0 --port=$PORT
