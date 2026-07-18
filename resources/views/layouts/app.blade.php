@@ -1,5 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    @stack('styles')
+
+    {{-- Force orange theme override --}}
+    <style>
+        :root {
+            --bs-primary: #f4671e !important;
+            --bs-primary-rgb: 244, 103, 30 !important;
+        }
+        .btn-primary { background-color: #f4671e !important; border-color: #f4671e !important; }
+        .btn-primary:hover { background-color: #d9550f !important; border-color: #d9550f !important; }
+        .btn-outline-primary { color: #f4671e !important; border-color: #f4671e !important; }
+        .btn-outline-primary:hover { background-color: #f4671e !important; color: #fff !important; }
+        .text-primary { color: #f4671e !important; }
+        .bg-primary { background-color: #f4671e !important; }
+        .badge.bg-primary { background-color: #f4671e !important; }
+        .stats-strip { background-color: #f4671e !important; }
+        .section-title-eyebrow { color: #f4671e !important; }
+        .navbar .nav-link:hover, .navbar .nav-link.active { color: #f4671e !important; }
+        .accordion-button:not(.collapsed) { color: #f4671e !important; background-color: rgba(244,103,30,0.08) !important; }
+        .border-start.border-primary { border-color: #f4671e !important; }
+        .process-step .step-icon { background-color: #f4671e !important; }
+        .service-icon { color: #f4671e !important; }
+        a.text-primary { color: #f4671e !important; }
+    </style>
+</head>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
